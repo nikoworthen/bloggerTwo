@@ -1,0 +1,18 @@
+<%= form_for(@article) do|f| %> <%#creates form for @article and begins to assign attributes %>
+	<ul>
+		<% @article.errors.full_messages.each do|error| %>
+		<li><%= error %></li>
+	<% end %>
+	</ul>
+	<p>
+	<%= f.label :title %><br />  <%#creates label %>
+	<%= f.text_field :title %> <%#creates single line text box %>
+	</p>
+	<p>
+	<%= f.label :body %><br />
+	<%= f.text_area :body %> <%#creates big text box %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>	
