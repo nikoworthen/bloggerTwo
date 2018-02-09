@@ -2,16 +2,22 @@
 	<ul>
 		<% @article.errors.full_messages.each do|error| %>
 		<li><%= error %></li>
-	<% end %>
+	 <% end %>
 	</ul>
 	<p>
-	<%= f.label :title %><br />  <%#creates label %>
-	<%= f.text_field :title %> <%#creates single line text box %>
+		<%= f.label :title %><br />  <%#creates label %>
+		<%= f.text_field :title %> <%#creates single line text box %>
 	</p>
 	<p>
-	<%= f.label :body %><br />
-	<%= f.text_area :body %> <%#creates big text box %>
+		<%= f.label :body %><br />
+		<%= f.text_area :body %> <%#creates big text box %>
 	</p>
+
+	<p>
+  		<%= f.label :tag_list %><br />
+  		<%= f.text_field :tag_list %>
+	</p>
+
 	<p>
 		<%= f.submit %>
 	</p>
